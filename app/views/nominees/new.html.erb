@@ -1,0 +1,5 @@
+<%= simple_form_for(@nomination, html: { class: 'form-horizontal' }) do |f| %>
+  <%= f.simple_fields_for :topics do |ff| %>
+    <%= render :partial => "nominees/form", object: ff %>
+  <% end %>
+<% end %>
