@@ -9,4 +9,8 @@ class NomineesController < ApplicationController
   def create
 
   end
+
+  def index
+    @nominees = Nomination.all
+  end
 end
