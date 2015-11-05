@@ -7,7 +7,7 @@ class NomineesController < ApplicationController
 
   def new
     @user = current_user.clone
-    2.times { @user.nominations.build }
+    3.times { @user.nominations.build }
   end
 
   def create

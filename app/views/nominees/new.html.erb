@@ -1,16 +1,23 @@
 <div class="panel panel-default">
+  <div class="panel-heading">Adauga favoritii tai</div>
   <div class="panel-body">
     <%= simple_form_for(@user,url: 'nominees/create', html: { class: 'form-horizontal' }) do |f| %>
       <%= f.simple_fields_for :nominations do |ff| %>
 
-        <div class="form-group">
-          <%= ff.text_field :nominee, placeholder: "Nomination Name", class: 'form-control' %>
-          <%= ff.text_field :specialty, placeholder: "Nomination Speciality", class: 'form-control' %>
-        </div>
-
+          <div class="form-group">
+            <div class="col-md-6">
+              <%= ff.text_field :nominee, placeholder: "Nume + Prenume", class: 'form-control' %>
+            </div>
+            <div class="col-md-6">
+              <%= ff.text_field :specialty, placeholder: "Specialitate", class: 'form-control' %>
+            </div>
+          </div>
       <% end %>
-
-       <%= f.submit "Save" ,:class=>"btn btn-success" %>
+      <div class="col-md-12">
+        <div class="form-group">
+          <%= f.submit "Save" ,:class=>"btn btn-success btn-block" %>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>
