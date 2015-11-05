@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105004937) do
+ActiveRecord::Schema.define(version: 20151105010634) do
 
   create_table "nominations", force: :cascade do |t|
     t.integer  "user_id"
@@ -21,6 +21,14 @@ ActiveRecord::Schema.define(version: 20151105004937) do
     t.datetime "updated_at", null: false
     t.integer  "votes"
   end
+
+  create_table "nominations_users", force: :cascade do |t|
+    t.integer "nomination_id"
+    t.integer "user_id"
+  end
+
+  add_index "nominations_users", ["nomination_id"], name: "index_nominations_users_on_nomination_id"
+  add_index "nominations_users", ["user_id"], name: "index_nominations_users_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string "provider"
