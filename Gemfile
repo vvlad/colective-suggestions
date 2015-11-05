@@ -47,7 +47,7 @@ group :development, :test do
   gem 'byebug'
   gem 'guard-pow'
   gem 'guard-bundler'
-  gem 'capistrano-cluster'
+  gem 'capistrano-cluster', require: false
 end
 
 group :development do

@@ -12,6 +12,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20151104232554) do
+
   create_table "nominations", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "nominee"
