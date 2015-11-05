@@ -1,3 +1,16 @@
-<%= simple_form_for @nomination do |f| %>
-
-<% end %>
+<h1>Nominees</h1>
+<table>
+  <tr>
+    <th>Nominee</th>
+    <th>Speciality</th>
+    <th>Votes</th>
+  </tr>
+  <%= paginate @nominees %>
+  <% @nominees.each do |nomination| %>
+    <tr>
+      <td><%= nomination.nominee %></td>
+      <td><%= nomination.specialty %></td>
+      <td><%= nomination.votes %></td>
+    </tr>
+  <% end %>
+</table>
