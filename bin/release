@@ -1,0 +1,4 @@
+#!/bin/bash
+
+
+./bin/bundle exec cap $1 deploy
