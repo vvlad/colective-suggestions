@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20151105010634) do
     t.string   "specialty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "votes"
   end
 
   create_table "nominations_users", force: :cascade do |t|

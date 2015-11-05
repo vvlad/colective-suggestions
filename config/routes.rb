@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :nominees
 
   get "/home", to: 'nominees#index', as: :user_root
-  root to: "nominees#index"
+  root to: "nominees#show"
 end
