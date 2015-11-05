@@ -9,4 +9,9 @@ class NomineesController < ApplicationController
   def create
 
   end
+
+  private
+  def resourse_params
+
+  end
 end
