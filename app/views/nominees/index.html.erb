@@ -1,11 +1,16 @@
-<h1>Nominees</h1>
-<table>
+<div class="page-header">
+  <div class="contextual">
+    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook), class: "btn btn-default"%>
+  </div>
+  <h1>Candidati</h1>
+</div>
+<div class="table-responsive">
+  <table class="table table-hover table-bordered">
   <tr>
-    <th>Nominee</th>
-    <th>Speciality</th>
-    <th>Votes</th>
+    <th class="info">Candidat</th>
+    <th class="info">Specializare</th>
+    <th class="info">Voturi</th>
   </tr>
-  <%= paginate @nominees %>
   <% @nominees.each do |nomination| %>
     <tr>
       <td><%= nomination.nominee %></td>
@@ -13,4 +18,6 @@
       <td><%= nomination.votes %></td>
     </tr>
   <% end %>
-</table>
+  </table>
+  <%= paginate @nominees %>
+</div>
